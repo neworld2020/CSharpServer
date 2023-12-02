@@ -1,0 +1,10 @@
+This File is used as test file for FileAppenderTest
+23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
+23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
+23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
+23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
+23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
+23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
+23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
+23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
+23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
