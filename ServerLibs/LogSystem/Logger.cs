@@ -10,11 +10,49 @@ public class Logger
     private LoggerFormatter? _loggerFormatter;
     private List<LoggerAppender> _appenders;
 
+    /// <summary>
+    /// Create a new Logger with a name and a level
+    /// </summary>
+    /// <param name="name">The name of the new logger</param>
+    /// <param name="level">The level of the logger, lower level of messages will be ignored.</param>
     public Logger(string name, LogLevel level = LogLevel.Info)
     {
         Name = name;
         Level = level;
         _appenders = new List<LoggerAppender>();
+        // Add myself to LoggerMan
+        var loggerMan = LoggerMan.GetInstance();
+        loggerMan.AddLogger(this);
+    }
+
+    /// <summary>
+    /// Create a new logger with the same configuration as another logger
+    /// </summary>
+    /// <param name="name"> The name of the new Logger </param>
+    /// <param name="other"> The logger whose configurations you want to copy</param>
+    /// <example>
+    /// <code>
+    /// // Create a new logger with the same configuration as the root logger
+    /// var newLogger = new Logger("newLogger", LoggerMan.GetInstance().GetRootLogger());
+    /// </code>
+    /// </example>
+    public Logger(string name, Logger other)
+    {
+        // Copy Configuration of Another Logger (Usually Root)
+        Name = name;
+        Level = other.Level;
+        _appenders = other._appenders;
+        _loggerFormatter = other._loggerFormatter;
+        // Add myself to LoggerMan
+        var loggerMan = LoggerMan.GetInstance();
+        loggerMan.AddLogger(this);
+    }
+
+    ~Logger()
+    {
+        // Delete myself in LoggerMan
+        var loggerMan = LoggerMan.GetInstance();
+        loggerMan.DelLogger(this.Name);
     }
     
     // Formatter Operations

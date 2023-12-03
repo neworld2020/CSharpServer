@@ -28,13 +28,13 @@ flowchart TD
 Logger is the main API providers for the user program. We provide these APIs for user to use
 ```csharp
 // Function Forms Logging APIs
-void Log(LogLevel level, LogEvent e);
+void Log(LogLevel level, string message);
 // For convenient use
-void Debug(LogEvent e);
-void Info(LogEvent e);
-void Warn(LogEvent e);
-void Error(LogEvent e);
-void Fatal(LogEvent e);
+void Debug(string message);
+void Info(string message);
+void Warn(string message);
+void Error(string message);
+void Fatal(string message);
 ```
 In conclusion, a typical usage of **Logger** looks like this:
 ```csharp
@@ -47,10 +47,20 @@ mainLogger.BindFormatter(exampleFormatter);
 var exampleAppender = new StdoutAppender(LogLevel.Info);
 mainLogger.AddAppender(exampleAppender);
 // 4. Add Log in your program wherever you like
-mainLogger.Log(LogLevel.Info, e);
+mainLogger.Log(LogLevel.Info, "Hello World");
 ```
 
+For convinient usage, we define a "root" logger at the beginning, so you can use it as follow:
+
+```csharp
+var rootLogger = LoggerMan.GetInstance().GetRootLogger();
+rootLogger.Info("Hello World");
+```
+
+It'll use default formatter and default appender (stdout appender).
+
 ## LoggerFormatter
+
 The logger formatter should be initialized with a pattern string, otherwise, it'll use a default string pattern to initialize itself.
 
 A typical string pattern looks like this,
