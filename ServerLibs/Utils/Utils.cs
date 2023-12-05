@@ -20,4 +20,14 @@ public class Utils
         uint lineNum = (uint)frame.GetFileLineNumber();
         return lineNum;
     }
+
+    public static int GetThreadId()
+    {
+        return Thread.CurrentThread.ManagedThreadId;
+    }
+
+    public static string GetThreadName()
+    {
+        return Thread.CurrentThread.Name ??= "main";
+    }
 }

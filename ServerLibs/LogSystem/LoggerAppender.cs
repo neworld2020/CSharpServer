@@ -1,4 +1,6 @@
+using ServerLibs.MultiThreadsSupport;
 namespace ServerLibs.LogSystem;
+
 
 public abstract class LoggerAppender
 {
@@ -20,7 +22,7 @@ public class StdoutAppender : LoggerAppender
     
     protected override void AppendAfterCheck(string message)
     {
-        Console.WriteLine(message);
+        SynchronizedIO.Stdout.Write(message);
     }
 }
 
@@ -31,8 +33,15 @@ public class FileAppender(string filePath, LogLevel level = LogLevel.Info) : Log
     protected override void AppendAfterCheck(string message)
     {
         // Write to the End
-        var streamWriter = File.AppendText(FilePath);
-        streamWriter.Write(message);
-        streamWriter.Close();
+        try
+        {
+            SynchronizedIO.FileAppend(FilePath, message);
+        }
+        catch (Exception e)
+        {
+            // Exceptions eg. DirectoryNotFoundException
+            SynchronizedIO.Stderr.Write(e.Message);
+        }
+        
     }
 }

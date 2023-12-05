@@ -1,3 +1,5 @@
+using ServerLibs.MultiThreadsSupport;
+
 namespace ServerLibTests;
 using ServerLibs.ConfigSystem;
 
@@ -37,7 +39,7 @@ public class ConfigSystemTests
             }
         };
         var testConfigVar = new ConfigVar<TestClass>("test", test);
-        Console.Write(testConfigVar.ToString());
+        SynchronizedIO.Stdout.Write(testConfigVar.ToString());
     }
 
     [Test]

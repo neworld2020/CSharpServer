@@ -1,4 +1,4 @@
-# LogSystem
+# Log System
 
 Log System contains several subsystems:
 + Logger
@@ -46,6 +46,11 @@ mainLogger.BindFormatter(exampleFormatter);
 // 3. Bind a Logger Appender (Here we set stdout as our output)
 var exampleAppender = new StdoutAppender(LogLevel.Info);
 mainLogger.AddAppender(exampleAppender);
+
+// or you can just use this to generate a logger
+// with same configurations of root logger
+var mainLogger = new Logger("main", LoggerMan.GetInstance().GetRootLogger());
+
 // 4. Add Log in your program wherever you like
 mainLogger.Log(LogLevel.Info, "Hello World");
 ```
@@ -88,3 +93,92 @@ The format of the **Time** is described as following:
 | %m   | Minute        | %s   | Second      |
 
 If there exists a wrong format in time formatting, this time will use default time pattern to show. It's also the same if there is a problem in logging formatting.
+
+## Multi-Thread Support
+
+The log system could be used in a multi-thread process with security. The `lock` keyword (or the `Monitor` class) in C# is used to keep the multi-thread security.
+
+For example, the stdout appender may use the resource `stdout` at the same time, and the file appender may use the same file at the same time. In this way, we define a `SynchronizedIO` to replace the original `IOs` like follow:
+
+```csharp
+public class SynchronizedIO
+{
+    // In a multi-thread application, always use these instead of normal IOs
+    public static readonly TextWriter Stdout = 
+        TextWriter.Synchronized(Console.Out);
+    public static readonly TextWriter Stderr = 
+        TextWriter.Synchronized(Console.Error);
+    public static readonly TextReader Stdin = 
+        TextReader.Synchronized(Console.In);
+}
+```
+
+For file operations, we use file lock of C#, like this
+
+```csharp
+[UnsupportedOSPlatform("ios")]
+[UnsupportedOSPlatform("macos")]
+[UnsupportedOSPlatform("tvos")]
+[UnsupportedOSPlatform("freebsd")]
+public static void FileWrite(string path, string content)
+{
+    bool lockAcquire = false;
+    while (!lockAcquire)
+    {
+        using var fileStream = new FileStream(path, 
+                                              FileMode.Append, 
+                                              FileAccess.Write, 
+                                              FileShare.None);
+        try
+        {
+            fileStream.Lock(0, fileStream.Length);
+            lockAcquire = true;
+            using var writer = new StreamWriter(fileStream);
+            writer.Write(content);
+        }
+        catch (IOException e)
+        {
+            Thread.Sleep(new Random().Next(10, 100));
+        }
+        finally
+        {
+            if (lockAcquire)
+            {
+                fileStream.Unlock(0, fileStream.Length);
+            }
+        }
+    }
+}
+```
+
+
+
+**Extenstion: Difference between Mutex and Lock in C#**
+
+> *The following is an explanation of difference between `lock` and `mutex` in C# (from stack overflow)*
+>
+> `lock` is a compiler keyword, not an actual class or object. It's a wrapper around the functionality of the `Monitor` class and is designed to make the `Monitor` easier to work with for the common case.
+>
+> The `Monitor` (and the `lock` keyword) are, as Darin said, restricted to the `AppDomain`. Primarily because a reference to a memory address (in the form of an instantiated object) is required to manage the "lock" and maintain the identity of the `Monitor`
+>
+> The `Mutex`, on the other hand, is a .Net wrapper around an operating system construct, and can be used for system-wide synchronization, using string *data* (instead of a pointer to data) as its identifier. Two mutexes that reference two strings in two completely different memory addresses, but having the same *data*, will actually utilize the same operating-system mutex.
+>
+> For example, such mutex can be used in system-level synchronization
+>
+> ```csharp
+> bool firstInstance;
+> Mutex mutex = new Mutex(false, @"Local\DASHBOARD_MAIN_APPLICATION", 
+>                         out firstInstance);
+> 
+> if (!firstInstance)
+> {
+>     //another copy of this application running 
+> }
+> else
+> {
+>     //run main application loop here.
+> }
+> // Refer to the mutex down here so garbage collection doesn't chuck it out.
+> GC.KeepAlive(mutex);
+> ```
+

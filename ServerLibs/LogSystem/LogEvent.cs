@@ -12,7 +12,7 @@ internal record LogEvent
     // Elapse Time from Starting the Program
     public required TimeSpan ElapseTime { get; init; }
     // Thread Information
-    public required uint ThreadId { get; init; }
+    public required int ThreadId { get; init; }
     public required string ThreadName { get; init; }
     // Fabric Information
     public required uint FabricId { get; init; }
@@ -26,7 +26,7 @@ internal record LogEvent
                                  uint? lineNum = null,
                                  DateTimeOffset? logTime = null,
                                  TimeSpan? elapseTime = null,
-                                 uint? threadId = null,
+                                 int? threadId = null,
                                  string? threadName = null,
                                  uint? fabricId = null)
     {
@@ -36,8 +36,8 @@ internal record LogEvent
             FileName = fileName ??= Utils.GetFileName(4),
             LineNum = lineNum ??= Utils.GetLineNum(4),
             LogTime = logTime ??= DateTimeOffset.Now,
-            ThreadId = threadId ??= 0,
-            ThreadName = threadName ??= "main",
+            ThreadId = threadId ??= Utils.GetThreadId(),
+            ThreadName = threadName ??= Utils.GetThreadName(),
             FabricId = fabricId ??= 0,
             Message = message
         };

@@ -1,10 +1,100 @@
-This File is used as test file for FileAppenderTest
-23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
-23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
-23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
-23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
-23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
-23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
-23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
-23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
-23-12-2 16:56:0	0	main	0	[Info]	[Null]	LogSystemTests:8	Test Message
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	20	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	20	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	20	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	20	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	17	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	16	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	19	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	12	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	7	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	18	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
+23-12-5 23:2:50	15	.NET TP Worker	0	[Info]	[root]	D:\STUDY\FUN\CSharpServer\ServerLibTests\LogSystemTests.cs:55	File Test Task
