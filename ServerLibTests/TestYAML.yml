@@ -1,0 +1,12 @@
+integer: 10
+decimal: 3.14
+string: hello world
+points:
+  - x: 1
+    y: 2
+  - x: 3
+    y: 4
+stringDecimalMap:
+  a: 1
+  b: 2
+  

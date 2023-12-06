@@ -76,4 +76,60 @@ var host = webAppConfigs.Value.Database.Host;
 
 ## Multi-Thread Security
 
-TODO
+We add a `ReaderWriterLockSlim` in the getter and setter of each config variable
+
+```csharp
+protected readonly ReaderWriterLockSlim LockSlim = new ();
+public T Value
+{
+    get
+    {
+        // Read Lock
+        LockSlim.EnterReadLock();
+        try
+        {
+            return _value;
+        }
+        finally
+        {
+            LockSlim.ExitReadLock();
+        }
+    }
+    private set
+    {
+        // Write Lock
+        LockSlim.EnterWriteLock();
+        try
+        {
+            _value = value;
+        }
+        finally
+        {
+            LockSlim.ExitWriteLock();
+        }
+    }
+}
+```
+
+In this way, mutiple threads can read the config together but only one thread can modify the config at the same time.
+
+## Config Management
+
+There will be several configs in a system, so we need to find a way to manage it.
+
+We design a `ConfigMan` to manage all configs, it can add, get the config. Providing the path of the config file, it can also update the config automatically with reflection in C#.
+
+```csharp
+string content = SynchronizedIO.FileRead(filePath);
+Type configType = _configTypes[name];
+var config = _configs[name];
+// We use reflection to call the FromString method of the config
+// Wrap the config in the Generic ConfigVar class
+Type configVarType = typeof(ConfigVar<>).MakeGenericType(configType);
+// The FromString method must exist in the config class
+MethodInfo fromStringMethod = configVarType.GetMethod("FromString")!;
+var result = (bool)fromStringMethod.Invoke(config, new object[] {content})!;
+return result;
+```
+
+By using reflection, we can use the according `FromString` method and it can update the config of any types of data.

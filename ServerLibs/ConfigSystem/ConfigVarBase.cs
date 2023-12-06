@@ -5,16 +5,51 @@ using LogSystem;
 
 public class ConfigVarBase
 {
-    protected static readonly Logger Logger = new Logger("Configs", LogSystem.LoggerMan.GetInstance().GetRootLogger());
-    public string Name { get; init; }
+    protected static readonly Logger Logger = new ("Configs", LogSystem.LoggerMan.GetInstance().GetRootLogger());
+    public string Name { get; }
     protected ConfigVarBase(string name) => Name = name;
+    
+    // Lock for thread safety
+    protected readonly ReaderWriterLockSlim LockSlim = new ();
 }
 
-public class ConfigVar<T> : ConfigVarBase
+public class ConfigVar<T> : ConfigVarBase where T : new()
 {
-    public ConfigVar(string name, T defaultValue = default(T)) : base(name) => Value = defaultValue;
-    public T? Value { get; private set; }
-    public override string? ToString()
+    public ConfigVar(string name, T defaultValue = default(T)) : base(name) => Value = defaultValue ??= new T();
+
+    // Thread-safe Value
+    private T _value;
+    public T Value
+    {
+        get
+        {
+            // Read Lock
+            LockSlim.EnterReadLock();
+            try
+            {
+                return _value;
+            }
+            finally
+            {
+                LockSlim.ExitReadLock();
+            }
+        }
+        private set
+        {
+            // Write Lock
+            LockSlim.EnterWriteLock();
+            try
+            {
+                _value = value;
+            }
+            finally
+            {
+                LockSlim.ExitWriteLock();
+            }
+        }
+    }
+    
+    public override string ToString()
     {
         if (Value is null) return "";
         var serializer = new SerializerBuilder()

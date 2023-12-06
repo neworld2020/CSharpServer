@@ -30,17 +30,12 @@ public class SynchronizedIO
                 lockAcquire = true;
                 using var writer = new StreamWriter(fileStream);
                 writer.WriteLine(content);
+                fileStream.Unlock(0, fileStream.Length);
+                lockAcquire = false;
             }
             catch (IOException e)
             {
                 Thread.Sleep(new Random().Next(10, 100));
-            }
-            finally
-            {
-                if (lockAcquire)
-                {
-                    fileStream.Unlock(0, fileStream.Length);
-                }
             }
         }
     }
@@ -61,17 +56,12 @@ public class SynchronizedIO
                 lockAcquire = true;
                 using var writer = new StreamWriter(fileStream);
                 writer.Write(content);
+                fileStream.Unlock(0, fileStream.Length);
+                lockAcquire = false;
             }
             catch (IOException e)
             {
                 Thread.Sleep(new Random().Next(10, 100));
-            }
-            finally
-            {
-                if (lockAcquire)
-                {
-                    fileStream.Unlock(0, fileStream.Length);
-                }
             }
         }
     }
@@ -123,6 +113,7 @@ public class SynchronizedIO
     public static string FileRead(string path)
     {
         bool lockAcquire = false;
+        
         while (!lockAcquire)
         {
             using var fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -132,23 +123,17 @@ public class SynchronizedIO
                 lockAcquire = true;
                 using var reader = new StreamReader(fileStream);
                 // In C#, return statement will also go to finally block first
-                return reader.ReadToEnd();
+                string result =  reader.ReadToEnd();
+                fileStream.Unlock(0, fileStream.Length);
+                return result;
             }
             catch (IOException e)
             {
                 // wait for file to be unlocked
                 Thread.Sleep(new Random().Next(10, 100));
             }
-            finally
-            {
-                if (lockAcquire)
-                {
-                    // Unlock only when lock is acquired
-                    fileStream.Unlock(0, fileStream.Length);
-                }
-            }
         }
-        // Impossible to reach here
+
         return "";
     }
 }

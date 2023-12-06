@@ -1,4 +1,4 @@
-using ServerLibs.MultiThreadsSupport;
+using ServerLibs.LogSystem;
 
 namespace ServerLibTests;
 using ServerLibs.ConfigSystem;
@@ -17,7 +17,15 @@ public class ConfigSystemTests
         public string String { get; set; } = "";
         public List<Point> Points { get; set; } = new List<Point>();
         public Dictionary<string, double> StringDecimalMap { get; set; } = new Dictionary<string, double>();
+
+        public override string ToString()
+        {
+            return $"Int={Integer}, Decimal={Decimal}, String={String}, Points={Points}, Map={StringDecimalMap}";
+        }
     }
+    
+    private readonly ConfigMan _configMan = ConfigMan.GetInstance();
+    private readonly Logger _logger = LoggerMan.GetInstance().GetRootLogger();
     
     [SetUp]
     public void Setup()
@@ -39,7 +47,7 @@ public class ConfigSystemTests
             }
         };
         var testConfigVar = new ConfigVar<TestClass>("test", test);
-        SynchronizedIO.Stdout.Write(testConfigVar.ToString());
+        _logger.Info(testConfigVar.ToString());
     }
 
     [Test]
@@ -57,7 +65,7 @@ stringDecimalMap:
   a: 1
   b: 2
 ";
-        var testConfigVar = new ConfigVar<TestClass>("test");
+        var testConfigVar = new ConfigVar<TestClass>("test1");
         testConfigVar.FromString(testYaml);
         Assert.That(testConfigVar.Value, Is.Not.Null);
         Assert.That(testConfigVar.Value.Integer, Is.EqualTo(10));
@@ -78,9 +86,58 @@ stringDecimalMap:
   a: 1
   b: 2
 ";
-        var testConfigVar = new ConfigVar<TestClass>("test");
+        var testConfigVar = new ConfigVar<TestClass>("test2");
         var isSucceed = testConfigVar.FromString(testYaml);
         Assert.False(isSucceed);
-        Assert.That(testConfigVar.Value, Is.Null);
+    }
+
+    [Test]
+    public void ConfigFileUpdateTest()
+    {
+        _configMan.AddConfig<TestClass>("test", 
+            "D:\\STUDY\\FUN\\CSharpServer\\ServerLibTests\\TestYAML.yml");
+        var tasks = _configMan.UpdateTasks();
+        Task.WaitAll(tasks.ToArray());
+        // Print the config
+        var testConfigVar = _configMan.GetConfig<TestClass>("test");
+        _logger.Info(testConfigVar.ToString());
+    }
+
+    [Test]
+    public void WrongTypeTest()
+    {
+        try
+        {
+            var wrongType = _configMan.GetConfig<Point>("test");
+        }
+        catch (TypeLoadException e)
+        {
+            Assert.Pass();
+        }
+        
+    }
+    
+    [Test]
+    public void UpdateReadLockTest()
+    {
+        // Start a Thread which read the config continuously
+        for (int i = 0; i < 10; i++)
+        {
+            Task.Run(() =>
+            {
+                while (true)
+                {
+                    // Print the config
+                    var testConfigVar = _configMan.GetConfig<TestClass>("test");
+                    _logger.Info(testConfigVar.Integer.ToString());
+                    Thread.Sleep(new Random().Next(10, 100));
+                }
+            });
+        }
+        Thread.Sleep(1000);
+        var tasks = _configMan.UpdateTasks();
+        Task.WaitAll(tasks.ToArray());
+        Thread.Sleep(1000);
+        
     }
 }
