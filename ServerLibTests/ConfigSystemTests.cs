@@ -95,7 +95,7 @@ stringDecimalMap:
     public void ConfigFileUpdateTest()
     {
         _configMan.AddConfig<TestClass>("test", 
-            "D:\\STUDY\\FUN\\CSharpServer\\ServerLibTests\\TestYAML.yml");
+            "E:\\CSharpServer\\ServerLibTests\\TestYAML.yml");
         var tasks = _configMan.UpdateTasks();
         Task.WaitAll(tasks.ToArray());
         // Print the config

@@ -11,19 +11,13 @@ public class LogSystemTests
     [SetUp]
     public void Setup()
     {
-        _fileLogger.AddAppender(new FileAppender("D:\\STUDY\\FUN\\CSharpServer\\ServerLibTests\\Output.txt"));
+        _fileLogger.AddAppender(new FileAppender("E:\\CSharpServer\\ServerLibTests\\Output.txt"));
     }
 
     [Test]
     public void RootLoggerTest()
     {
         _rootLogger.Info("Test Message");
-    }
-
-    [Test]
-    public void MakeEventTest()
-    {
-        _rootLogger.Info("Hello World");
     }
 
     [Test]
